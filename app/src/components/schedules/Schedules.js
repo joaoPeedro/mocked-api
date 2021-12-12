@@ -85,7 +85,7 @@ const Schedules = ({isRetired = false}) => {
                       <picture>
                         <img
                           loading="lazy"
-                          src={`http://placebeard.it/140/140?${idx}`}
+                          src={`https://placebeard.it/140/140?${idx}`}
                           alt={item.name}
                           width="60"
                           height="60"
