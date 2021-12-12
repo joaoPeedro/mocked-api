@@ -7,7 +7,7 @@ module.exports = {
   mode: prod ? "production" : "development",
   entry: "./src/index.js",
   output: {
-    path: __dirname + "/dist/",
+    path: __dirname + "/docs/",
   },
   module: {
     rules: [
