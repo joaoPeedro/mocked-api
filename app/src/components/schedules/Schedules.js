@@ -5,6 +5,10 @@ import {useDataFetching} from "../../customHooks/dataFetching";
 import ScheduleLog from "./ScheduleLog";
 import "./_schedules.scss";
 
+/**
+ * @param {boolean} isRetired - to render component with schedules retired/unRetired
+ * @returns schedules component and <ScheduleLog /> if one schedule is active/selected
+ */
 const Schedules = ({isRetired = false}) => {
   const {appMainContext, setAppMainContext} = useContext(AppContext);
 

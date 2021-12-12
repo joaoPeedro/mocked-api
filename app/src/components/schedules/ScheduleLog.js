@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from "react";
 import {useDataFetching} from "../../customHooks/dataFetching";
 
+/**
+ *
+ * @param {string} scheduleId - id of schedule to render logs
+ * @returns render logs component
+ */
 const ScheduleLog = ({scheduleId}) => {
   // const url = "http://localhost:3000/scheduleLogs";
   const url = `https://mocked-api-server.herokuapp.com/scheduleLogs`;

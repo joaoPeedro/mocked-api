@@ -12,6 +12,7 @@ const AppContextProvider = (props) => {
     isMobile: checkIsMobile(),
   });
 
+  // to check if App "isMobile" on window resize
   useEffect(() => {
     const listener = () => {
       checkIsMobile()
