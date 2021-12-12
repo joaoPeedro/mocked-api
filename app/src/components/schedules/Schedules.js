@@ -89,7 +89,7 @@ const Schedules = ({isRetired = false}) => {
                       <picture>
                         <img
                           loading="lazy"
-                          src={`https://placebeard.it/140/140?${idx}`}
+                          src={`https://randomuser.me/api/portraits/men/${idx}.jpg`}
                           alt={item.name}
                           width="60"
                           height="60"
