@@ -1,0 +1,112 @@
+@import "../../styles/utility";
+
+.schedules {
+  display: flex;
+  align-items: flex-start;
+  > .schedules-list {
+    @extend %box-wrp;
+    flex-grow: 1;
+    background: $bg-color-light;
+    @include dist-behaviour-pro(
+      $props: (
+        "margin-right": 1,
+        "margin-left": 1,
+      )
+    );
+
+    @media screen and (min-width: $break-l) {
+      position: sticky;
+      top: -1px;
+
+      > .wrp {
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+.schedule {
+  background: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid $bg-color-1;
+
+  > .wrp {
+    @include dist-behaviour-pro(
+      $props: (
+        "padding": 2,
+      )
+    );
+
+    .info {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      picture {
+        @include dist-behaviour-pro(
+          $props: (
+            "margin-right": 1,
+          )
+        );
+        display: flex;
+        flex: none;
+        border-radius: 50%;
+        border: 1px solid $color-primary-3;
+        background-color: $color-primary-3;
+        overflow: hidden;
+      }
+
+      .description {
+        width: 100%;
+      }
+    }
+  }
+
+  &.active {
+    > .wrp {
+      position: sticky;
+      top: -1px;
+    }
+  }
+  &.active,
+  &:hover {
+    > .wrp {
+      background-color: $color-primary-3;
+      .info * {
+        color: $bg-color-light;
+      }
+    }
+  }
+}
+
+.schedule-logs {
+  flex-grow: 1;
+  background: $bg-color-light;
+  @include dist-behaviour-pro(
+    $props: (
+      "padding": 2 0 0,
+    )
+  );
+  @extend %box-wrp;
+
+  @media screen and (max-width: #{$break-l - 1}) {
+    box-shadow: none !important;
+  }
+  @media screen and (min-width: #{$break-l - 1}) {
+    margin-right: $dist-media-l;
+  }
+
+  .info {
+    @include dist-behaviour-pro(
+      $props: (
+        "padding": 1 1,
+      )
+    );
+  }
+
+  .list {
+    .log:nth-child(odd) {
+      background-color: $color-primary-5;
+    }
+  }
+}

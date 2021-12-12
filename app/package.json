@@ -1,0 +1,65 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "simple reactApp to connect an api",
+  "main": "index.js",
+  "browserslist": [
+    "last 2 version"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server --mode=development --open --hot ",
+    "build": "webpack --mode=production",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "author": "joao pedro baltazar",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.4.2",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.4.3",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-resolve": "^27.4.2",
+    "mini-css-extract-plugin": "^2.4.5",
+    "react-test-renderer": "^17.0.2",
+    "sass": "^1.44.0",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "jest": {
+    "automock": false,
+    "resetMocks": false,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.3",
+    "axios": "^0.24.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2"
+  }
+}

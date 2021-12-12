@@ -1,0 +1,60 @@
+//breack's
+$break-xxs: 360px;
+$break-xs: 480px;
+$break-s: 600px;
+$break-m: 840px;
+$break-l: 960px;
+$break-xl: 1280px;
+$break-xxl: 1600px;
+$break-max: 1920px;
+
+//distance
+$dist-media-xxs: 10 * 1px;
+$dist-media-l: 14 * 1px;
+
+// set properties and values($dist * value) to media screens
+// scss aplication:
+//@include dist-behaviour-pro($props : ( 'padding' : (1,2) , 'margin' : (2,2,1)));
+//  ||
+//@include dist-behaviour-pro($props : ( padding : 1 2 , margin : 2 2 1 ));
+@mixin dist-behaviour-pro($props) {
+  @each $prop, $values in $props {
+    $result-value: "";
+    @each $value in $values {
+      $result-value: $result-value + " " + ($dist-media-xxs * $value);
+    }
+    #{$prop}: #{$result-value};
+  }
+  @media screen and (min-width: $break-l) {
+    @each $prop, $values in $props {
+      $result-value: "";
+      @each $value in $values {
+        $result-value: $result-value + " " + ($dist-media-l * $value);
+      }
+      #{$prop}: #{$result-value};
+    }
+  }
+}
+
+/*
+* colors
+*/
+
+$color-primary-1: #344955;
+$color-primary-2: #232f34;
+$color-primary-3: #4a6575;
+$color-primary-4: #e5e5e5;
+$color-primary-5: #f6f6f6;
+
+$color-secondary-1: #f9aa33;
+
+$color-loading: $color-primary-5;
+
+$bg-color-light: #fff;
+$bg-color-1: $color-primary-4;
+
+%box-wrp {
+  width: auto;
+  border-radius: 2px;
+  box-shadow: 2px 4px 8px rgba(200, 200, 200, 0.2);
+}
