@@ -6,8 +6,9 @@ import axios from "axios";
  * @param {string} url - endpoint
  * @param {obj} params - request params
  * @param {obj} data - request data
- * @returns {data, dataState, request}
+ * @returns {data, dataState : "PENDING" || "FULFILLED" || "REJECTED", request}
  */
+
 export const useDataFetching = ({
   method = "get",
   url = null,
