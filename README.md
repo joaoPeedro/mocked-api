@@ -1,6 +1,6 @@
 # mocked-api
 
-This is a simple reactApp to connect to a Node js api.
+This is a simple reactApp to connect to a Node js api hosted in heroku.
 This front-end application render schedules and the schedule log details.
 
 ## Tree Structure
@@ -92,3 +92,7 @@ to make requests to an API (uses Axios):
 - add animation to collapse (open/close) scheduleLog in mobile
 - add test for order by:
 - add test to put Method
+
+## Application Demo
+
+<a href="https://joaopeedro.github.io/mocked-api/">APP LINK</a>
